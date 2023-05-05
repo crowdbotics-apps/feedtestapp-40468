@@ -1,6 +1,9 @@
 from django.conf import settings
 from django.db import models
-from users.models import User
+
+
+User = settings.AUTH_USER_MODEL
+
 
 class Post(models.Model):
     'Generated Model'
