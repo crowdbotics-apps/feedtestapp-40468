@@ -1,7 +1,10 @@
+import { api_v1_post_retrieve } from "../../store/feedtestappAPI/posts.slice.js";
+import { useDispatch } from "react-redux";
 import React, { useState, useEffect } from "react";
 import { Text, View, StyleSheet, ScrollView, Image, Pressable } from "react-native";
 
 const EventDetails = () => {
+  const dispatch = useDispatch();
   const [event, setEvent] = useState({});
   useEffect(() => {
     setEvent({
@@ -12,6 +15,7 @@ const EventDetails = () => {
       time: "11:00 AM",
       info: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam feugiat tellus a mattis ornare. Fusce sit amet libero id est iaculis hendrerit in quis nibh. \n \nProin porttitor velit nec purus consequat hendrerit. Aenean vel volutpat metus. Ut ullamcorper arcu tellus, non semper nisl lobortis vitae. Nulla sit amet risus risus. Vestibulum euismod accumsan nulla."
     });
+    dispatch(api_v1_post_retrieve());
   }, []);
   return <View style={styles.container}>
       <ScrollView>
