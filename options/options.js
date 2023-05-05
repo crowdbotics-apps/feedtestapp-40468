@@ -6,6 +6,12 @@ export const globalOptions = {
 };
 export const modulesOptions = {
   "@modules/app-menu": {
-    copy: "Routes available!"
+    "copy": "Routes available!"
+  },
+  "@modules/splash": {
+    "duration": duration,
+    "onDurationEnd": onDurationEnd,
+    "hide": hide,
+    "show": show
   }
 };
